@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Drone Delivery Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>🚁 Drone Delivery — HTML Game</h1>
+
+    <div class="controls-row">
+      <label>Rows <input id="rows" type="number" value="5" min="2" /></label>
+      <label>Cols <input id="cols" type="number" value="5" min="2" /></label>
+      <button id="setGrid" class="primary">Set Grid</button>
+      <button id="reset" class="big-btn">Reset</button>
+      <button id="helpBtn" class="big-btn">Help (auto)</button>
+    </div>
+
+    <div class="status">
+      <div class="pill">Points: <span id="points">0</span></div>
+      <div class="pill">Carrying: <span id="carrying">No</span></div>
+      <div class="pill">Delivered A: <span id="delA">No</span></div>
+      <div class="pill">Delivered B: <span id="delB">No</span></div>
+    </div>
+
+    <div class="board-frame" id="boardFrame" aria-hidden="false">
+      <div id="grid" class="grid" role="grid"></div>
+    </div>
+
+    <div class="controls-grid" style="margin-top:14px;">
+      <button id="up">Up</button>
+      <button id="down">Down</button>
+      <button id="left">Left</button>
+      <button id="right">Right</button>
+
+      <button id="pickup" class="big-btn">Pickup</button>
+      <button id="drop" class="big-btn">Drop</button>
+    </div>
+  </div>
+
+  <div id="modalRoot"></div>
+  <script src="script.js"></script>
+</body>
+</html>
